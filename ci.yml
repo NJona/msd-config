@@ -1,0 +1,21 @@
+schemaVersion: v0.2
+prepare:
+  steps:
+    - command: echo prepare
+test:
+  steps: []
+run:
+  foo:
+    steps:
+      - command: echo run-foo
+    plan: 8
+    replicas: 2
+    network:
+      path: /foo
+  bar:
+    steps:
+      - command: echo run-bar
+    plan: 8
+    replicas: 3
+    network:
+      path: /bar
