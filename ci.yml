@@ -9,13 +9,13 @@ run:
     steps:
       - command: echo run-foo
     plan: 8
-    replicas: 2
+    replicas: 1
     network:
       path: /foo
   bar:
     steps:
       - command: echo run-bar
     plan: 8
-    replicas: 3
+    replicas: 1
     network:
       path: /bar
